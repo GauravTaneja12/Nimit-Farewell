@@ -13,12 +13,24 @@
   box-sizing: border-box;
 }
 
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
 body {
   margin: 0;
   min-height: 100vh;
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
   color: var(--text);
   background: linear-gradient(135deg, var(--bg), #020617);
+  animation: fadeIn 0.8s ease;
 }
 
 body.page-intro {
