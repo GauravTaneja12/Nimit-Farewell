@@ -298,6 +298,8 @@ h2 {
 .final-hero {
     min-height: auto;
     margin-bottom: 10px;
+    padding-top: 0;
+    justify-content: flex-start;
 }
 
 .final-wish {
@@ -324,6 +326,20 @@ h2 {
 
 .choice-actions {
     justify-content: center;
+}
+
+body.page-final .container {
+  margin-top: 22px;
+  margin-bottom: 24px;
+}
+
+body.page-final .button-row {
+  margin-top: 14px;
+  justify-content: center;
+}
+
+body.page-final .farewell-photo {
+  max-height: min(62vh, 520px);
 }
 
 .choice-response {
@@ -425,6 +441,18 @@ h2 {
     max-height: 360px;
   }
 
+  body.page-final .container {
+    margin-top: 16px;
+  }
+
+  body.page-final .final-hero {
+    margin-bottom: 6px;
+  }
+
+  body.page-final .farewell-photo {
+    max-height: min(54vh, 360px);
+  }
+
   .code-card pre {
     white-space: pre-wrap;
   }
@@ -478,5 +506,22 @@ h2 {
 
   .farewell-photo {
     max-height: 280px;
+  }
+
+  body.page-final .container {
+    margin-top: 10px;
+    margin-bottom: 16px;
+  }
+
+  body.page-final .farewell-photo-wrap {
+    margin-top: 12px;
+  }
+
+  body.page-final .button-row {
+    margin-bottom: 12px;
+  }
+
+  body.page-final .farewell-photo {
+    max-height: min(48vh, 280px);
   }
 }
