@@ -446,6 +446,8 @@ body.page-final .farewell-photo {
   }
 
   body.page-final .final-hero {
+    min-height: auto;
+    padding-top: 0;
     margin-bottom: 6px;
   }
 
@@ -511,6 +513,12 @@ body.page-final .farewell-photo {
   body.page-final .container {
     margin-top: 10px;
     margin-bottom: 16px;
+  }
+
+  body.page-final .final-hero {
+    min-height: auto;
+    padding-top: 0;
+    margin-bottom: 4px;
   }
 
   body.page-final .farewell-photo-wrap {
