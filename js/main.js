@@ -56,13 +56,22 @@
     const cardRect = choiceCard.getBoundingClientRect();
     const btnRect = noBtn.getBoundingClientRect();
 
-    const xRange = Math.max(80, (cardRect.width - btnRect.width) / 2 - 24);
-    const yRange = Math.max(50, (cardRect.height - btnRect.height) / 2 - 24);
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const xRange = Math.max(isMobile ? 120 : 80, (cardRect.width - btnRect.width) / 2 - 20);
+    const yRange = Math.max(isMobile ? 90 : 50, (cardRect.height - btnRect.height) / 2 - 20);
+    const minDistance = isMobile ? 90 : 40;
 
-    const randomX = (Math.random() * 2 - 1) * xRange;
-    const randomY = (Math.random() * 2 - 1) * yRange;
+    let randomX = 0;
+    let randomY = 0;
+    let tries = 0;
 
-    noBtn.style.transform = `translate(${randomX.toFixed(0)}px, ${randomY.toFixed(0)}px)`;
+    do {
+      randomX = (Math.random() * 2 - 1) * xRange;
+      randomY = (Math.random() * 2 - 1) * yRange;
+      tries++;
+    } while (Math.hypot(randomX, randomY) < minDistance && tries < 12);
+
+    noBtn.style.transform = `translate(${Math.round(randomX)}px, ${Math.round(randomY)}px)`;
   }
 
   if (hasHover) {
